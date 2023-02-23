@@ -9,6 +9,9 @@ local main =
         'github.com/Duologic/grafana-infinity-datasource-libsonnet/grafana-infinity-datasource-libsonnet',
         'Jsonnet library for grafana-infinity-datasource-libsonnet',
         'main.libsonnet',
+      )
+      + d.package.withUsageTemplate(
+        'local infinityDS = import "%(import)s"'
       ),
   };
 

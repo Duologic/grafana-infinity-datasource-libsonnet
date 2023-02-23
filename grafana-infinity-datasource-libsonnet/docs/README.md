@@ -11,7 +11,7 @@ jb install github.com/Duologic/grafana-infinity-datasource-libsonnet/grafana-inf
 ## Usage
 
 ```jsonnet
-local grafana-infinity-datasource-libsonnet = import "github.com/Duologic/grafana-infinity-datasource-libsonnet/grafana-infinity-datasource-libsonnet/main.libsonnet"
+local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libsonnet/grafana-infinity-datasource-libsonnet/main.libsonnet"
 ```
 
 ## Index
