@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/Duologic/crdsonnet.git",
+          "subdir": "crdsonnet"
+        }
+      },
+      "version": "merge_xofParts_in_object"
+    }
+  ],
+  "legacyImports": true
+}
