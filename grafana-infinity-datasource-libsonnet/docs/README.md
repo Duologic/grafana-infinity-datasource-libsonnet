@@ -30,18 +30,18 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
     * [`fn withFilterExpression(value)`](#fn-infinitydataqueryinfinitycsvquerywithfilterexpression)
     * [`fn withFilters(value)`](#fn-infinitydataqueryinfinitycsvquerywithfilters)
     * [`fn withFiltersMixin(value)`](#fn-infinitydataqueryinfinitycsvquerywithfiltersmixin)
-    * [`fn withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')`](#fn-infinitydataqueryinfinitycsvquerywithformat)
+    * [`fn withFormat(value)`](#fn-infinitydataqueryinfinitycsvquerywithformat)
     * [`fn withHide(value)`](#fn-infinitydataqueryinfinitycsvquerywithhide)
     * [`fn withKey(value)`](#fn-infinitydataqueryinfinitycsvquerywithkey)
-    * [`fn withParser(value='backend')`](#fn-infinitydataqueryinfinitycsvquerywithparser)
+    * [`fn withParser()`](#fn-infinitydataqueryinfinitycsvquerywithparser)
     * [`fn withQueryType(value)`](#fn-infinitydataqueryinfinitycsvquerywithquerytype)
     * [`fn withRefId(value)`](#fn-infinitydataqueryinfinitycsvquerywithrefid)
     * [`fn withReferenceName(value)`](#fn-infinitydataqueryinfinitycsvquerywithreferencename)
     * [`fn withRootSelector(value)`](#fn-infinitydataqueryinfinitycsvquerywithrootselector)
-    * [`fn withSource(value='reference')`](#fn-infinitydataqueryinfinitycsvquerywithsource)
+    * [`fn withSource()`](#fn-infinitydataqueryinfinitycsvquerywithsource)
     * [`fn withSummarizeBy(value)`](#fn-infinitydataqueryinfinitycsvquerywithsummarizeby)
     * [`fn withSummarizeExpression(value)`](#fn-infinitydataqueryinfinitycsvquerywithsummarizeexpression)
-    * [`fn withType(value='csv')`](#fn-infinitydataqueryinfinitycsvquerywithtype)
+    * [`fn withType()`](#fn-infinitydataqueryinfinitycsvquerywithtype)
     * [`fn withUql(value)`](#fn-infinitydataqueryinfinitycsvquerywithuql)
     * [`fn withUrl(value)`](#fn-infinitydataqueryinfinitycsvquerywithurl)
     * [`fn withUrlOptions(value)`](#fn-infinitydataqueryinfinitycsvquerywithurloptions)
@@ -50,12 +50,12 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinitycsvquerycolumnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinitycsvquerycolumnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinitycsvquerycolumnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinitycsvquerycolumnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinitycsvquerycolumnswithtype)
     * [`obj computed_columns`](#obj-infinitydataqueryinfinitycsvquerycomputed_columns)
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinitycsvquerycomputed_columnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinitycsvquerycomputed_columnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinitycsvquerycomputed_columnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinitycsvquerycomputed_columnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinitycsvquerycomputed_columnswithtype)
     * [`obj csv_options`](#obj-infinitydataqueryinfinitycsvquerycsv_options)
       * [`fn withColumns(value)`](#fn-infinitydataqueryinfinitycsvquerycsv_optionswithcolumns)
       * [`fn withComment(value)`](#fn-infinitydataqueryinfinitycsvquerycsv_optionswithcomment)
@@ -71,19 +71,19 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
         * [`fn withUid(value)`](#fn-infinitydataqueryinfinitycsvquerydatasourcedatasourcerefwithuid)
     * [`obj filters`](#obj-infinitydataqueryinfinitycsvqueryfilters)
       * [`fn withField(value)`](#fn-infinitydataqueryinfinitycsvqueryfilterswithfield)
-      * [`fn withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')`](#fn-infinitydataqueryinfinitycsvqueryfilterswithoperator)
+      * [`fn withOperator(value)`](#fn-infinitydataqueryinfinitycsvqueryfilterswithoperator)
       * [`fn withValue(value)`](#fn-infinitydataqueryinfinitycsvqueryfilterswithvalue)
       * [`fn withValueMixin(value)`](#fn-infinitydataqueryinfinitycsvqueryfilterswithvaluemixin)
     * [`obj url_options`](#obj-infinitydataqueryinfinitycsvqueryurl_options)
-      * [`fn withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithbodycontenttype)
+      * [`fn withBodyContentType(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithbodycontenttype)
       * [`fn withBodyForm(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithbodyform)
       * [`fn withBodyFormMixin(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithbodyformmixin)
       * [`fn withBodyGraphqlQuery(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithbodygraphqlquery)
-      * [`fn withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithbodytype)
+      * [`fn withBodyType(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithbodytype)
       * [`fn withData(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithdata)
       * [`fn withHeaders(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithheaders)
       * [`fn withHeadersMixin(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithheadersmixin)
-      * [`fn withMethod(value='enum[GET,POST]')`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithmethod)
+      * [`fn withMethod(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithmethod)
       * [`fn withParams(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithparams)
       * [`fn withParamsMixin(value)`](#fn-infinitydataqueryinfinitycsvqueryurl_optionswithparamsmixin)
       * [`obj body_form`](#obj-infinitydataqueryinfinitycsvqueryurl_optionsbody_form)
@@ -106,21 +106,21 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
     * [`fn withFilterExpression(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithfilterexpression)
     * [`fn withFilters(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithfilters)
     * [`fn withFiltersMixin(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithfiltersmixin)
-    * [`fn withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')`](#fn-infinitydataqueryinfinitygraphqlquerywithformat)
+    * [`fn withFormat(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithformat)
     * [`fn withGroq(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithgroq)
     * [`fn withHide(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithhide)
     * [`fn withJsonOptions(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithjsonoptions)
     * [`fn withJsonOptionsMixin(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithjsonoptionsmixin)
     * [`fn withKey(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithkey)
-    * [`fn withParser(value='groq')`](#fn-infinitydataqueryinfinitygraphqlquerywithparser)
+    * [`fn withParser()`](#fn-infinitydataqueryinfinitygraphqlquerywithparser)
     * [`fn withQueryType(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithquerytype)
     * [`fn withRefId(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithrefid)
     * [`fn withReferenceName(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithreferencename)
     * [`fn withRootSelector(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithrootselector)
-    * [`fn withSource(value='reference')`](#fn-infinitydataqueryinfinitygraphqlquerywithsource)
+    * [`fn withSource()`](#fn-infinitydataqueryinfinitygraphqlquerywithsource)
     * [`fn withSummarizeBy(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithsummarizeby)
     * [`fn withSummarizeExpression(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithsummarizeexpression)
-    * [`fn withType(value='graphql')`](#fn-infinitydataqueryinfinitygraphqlquerywithtype)
+    * [`fn withType()`](#fn-infinitydataqueryinfinitygraphqlquerywithtype)
     * [`fn withUql(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithuql)
     * [`fn withUrl(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithurl)
     * [`fn withUrlOptions(value)`](#fn-infinitydataqueryinfinitygraphqlquerywithurloptions)
@@ -129,12 +129,12 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinitygraphqlquerycolumnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinitygraphqlquerycolumnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinitygraphqlquerycolumnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinitygraphqlquerycolumnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinitygraphqlquerycolumnswithtype)
     * [`obj computed_columns`](#obj-infinitydataqueryinfinitygraphqlquerycomputed_columns)
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinitygraphqlquerycomputed_columnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinitygraphqlquerycomputed_columnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinitygraphqlquerycomputed_columnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinitygraphqlquerycomputed_columnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinitygraphqlquerycomputed_columnswithtype)
     * [`obj datasource`](#obj-infinitydataqueryinfinitygraphqlquerydatasource)
       * [`fn withDataSourceRef(value)`](#fn-infinitydataqueryinfinitygraphqlquerydatasourcewithdatasourceref)
       * [`fn withDataSourceRefMixin(value)`](#fn-infinitydataqueryinfinitygraphqlquerydatasourcewithdatasourcerefmixin)
@@ -143,22 +143,22 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
         * [`fn withUid(value)`](#fn-infinitydataqueryinfinitygraphqlquerydatasourcedatasourcerefwithuid)
     * [`obj filters`](#obj-infinitydataqueryinfinitygraphqlqueryfilters)
       * [`fn withField(value)`](#fn-infinitydataqueryinfinitygraphqlqueryfilterswithfield)
-      * [`fn withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')`](#fn-infinitydataqueryinfinitygraphqlqueryfilterswithoperator)
+      * [`fn withOperator(value)`](#fn-infinitydataqueryinfinitygraphqlqueryfilterswithoperator)
       * [`fn withValue(value)`](#fn-infinitydataqueryinfinitygraphqlqueryfilterswithvalue)
       * [`fn withValueMixin(value)`](#fn-infinitydataqueryinfinitygraphqlqueryfilterswithvaluemixin)
     * [`obj json_options`](#obj-infinitydataqueryinfinitygraphqlqueryjson_options)
       * [`fn withColumnar(value)`](#fn-infinitydataqueryinfinitygraphqlqueryjson_optionswithcolumnar)
       * [`fn withRootIsNotArray(value)`](#fn-infinitydataqueryinfinitygraphqlqueryjson_optionswithrootisnotarray)
     * [`obj url_options`](#obj-infinitydataqueryinfinitygraphqlqueryurl_options)
-      * [`fn withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithbodycontenttype)
+      * [`fn withBodyContentType(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithbodycontenttype)
       * [`fn withBodyForm(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithbodyform)
       * [`fn withBodyFormMixin(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithbodyformmixin)
       * [`fn withBodyGraphqlQuery(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithbodygraphqlquery)
-      * [`fn withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithbodytype)
+      * [`fn withBodyType(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithbodytype)
       * [`fn withData(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithdata)
       * [`fn withHeaders(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithheaders)
       * [`fn withHeadersMixin(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithheadersmixin)
-      * [`fn withMethod(value='enum[GET,POST]')`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithmethod)
+      * [`fn withMethod(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithmethod)
       * [`fn withParams(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithparams)
       * [`fn withParamsMixin(value)`](#fn-infinitydataqueryinfinitygraphqlqueryurl_optionswithparamsmixin)
       * [`obj body_form`](#obj-infinitydataqueryinfinitygraphqlqueryurl_optionsbody_form)
@@ -181,18 +181,18 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
     * [`fn withFilterExpression(value)`](#fn-infinitydataqueryinfinityhtmlquerywithfilterexpression)
     * [`fn withFilters(value)`](#fn-infinitydataqueryinfinityhtmlquerywithfilters)
     * [`fn withFiltersMixin(value)`](#fn-infinitydataqueryinfinityhtmlquerywithfiltersmixin)
-    * [`fn withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')`](#fn-infinitydataqueryinfinityhtmlquerywithformat)
+    * [`fn withFormat(value)`](#fn-infinitydataqueryinfinityhtmlquerywithformat)
     * [`fn withHide(value)`](#fn-infinitydataqueryinfinityhtmlquerywithhide)
     * [`fn withKey(value)`](#fn-infinitydataqueryinfinityhtmlquerywithkey)
-    * [`fn withParser(value='backend')`](#fn-infinitydataqueryinfinityhtmlquerywithparser)
+    * [`fn withParser()`](#fn-infinitydataqueryinfinityhtmlquerywithparser)
     * [`fn withQueryType(value)`](#fn-infinitydataqueryinfinityhtmlquerywithquerytype)
     * [`fn withRefId(value)`](#fn-infinitydataqueryinfinityhtmlquerywithrefid)
     * [`fn withReferenceName(value)`](#fn-infinitydataqueryinfinityhtmlquerywithreferencename)
     * [`fn withRootSelector(value)`](#fn-infinitydataqueryinfinityhtmlquerywithrootselector)
-    * [`fn withSource(value='reference')`](#fn-infinitydataqueryinfinityhtmlquerywithsource)
+    * [`fn withSource()`](#fn-infinitydataqueryinfinityhtmlquerywithsource)
     * [`fn withSummarizeBy(value)`](#fn-infinitydataqueryinfinityhtmlquerywithsummarizeby)
     * [`fn withSummarizeExpression(value)`](#fn-infinitydataqueryinfinityhtmlquerywithsummarizeexpression)
-    * [`fn withType(value='html')`](#fn-infinitydataqueryinfinityhtmlquerywithtype)
+    * [`fn withType()`](#fn-infinitydataqueryinfinityhtmlquerywithtype)
     * [`fn withUrl(value)`](#fn-infinitydataqueryinfinityhtmlquerywithurl)
     * [`fn withUrlOptions(value)`](#fn-infinitydataqueryinfinityhtmlquerywithurloptions)
     * [`fn withUrlOptionsMixin(value)`](#fn-infinitydataqueryinfinityhtmlquerywithurloptionsmixin)
@@ -200,12 +200,12 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinityhtmlquerycolumnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinityhtmlquerycolumnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinityhtmlquerycolumnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinityhtmlquerycolumnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinityhtmlquerycolumnswithtype)
     * [`obj computed_columns`](#obj-infinitydataqueryinfinityhtmlquerycomputed_columns)
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinityhtmlquerycomputed_columnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinityhtmlquerycomputed_columnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinityhtmlquerycomputed_columnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinityhtmlquerycomputed_columnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinityhtmlquerycomputed_columnswithtype)
     * [`obj datasource`](#obj-infinitydataqueryinfinityhtmlquerydatasource)
       * [`fn withDataSourceRef(value)`](#fn-infinitydataqueryinfinityhtmlquerydatasourcewithdatasourceref)
       * [`fn withDataSourceRefMixin(value)`](#fn-infinitydataqueryinfinityhtmlquerydatasourcewithdatasourcerefmixin)
@@ -214,19 +214,19 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
         * [`fn withUid(value)`](#fn-infinitydataqueryinfinityhtmlquerydatasourcedatasourcerefwithuid)
     * [`obj filters`](#obj-infinitydataqueryinfinityhtmlqueryfilters)
       * [`fn withField(value)`](#fn-infinitydataqueryinfinityhtmlqueryfilterswithfield)
-      * [`fn withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')`](#fn-infinitydataqueryinfinityhtmlqueryfilterswithoperator)
+      * [`fn withOperator(value)`](#fn-infinitydataqueryinfinityhtmlqueryfilterswithoperator)
       * [`fn withValue(value)`](#fn-infinitydataqueryinfinityhtmlqueryfilterswithvalue)
       * [`fn withValueMixin(value)`](#fn-infinitydataqueryinfinityhtmlqueryfilterswithvaluemixin)
     * [`obj url_options`](#obj-infinitydataqueryinfinityhtmlqueryurl_options)
-      * [`fn withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithbodycontenttype)
+      * [`fn withBodyContentType(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithbodycontenttype)
       * [`fn withBodyForm(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithbodyform)
       * [`fn withBodyFormMixin(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithbodyformmixin)
       * [`fn withBodyGraphqlQuery(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithbodygraphqlquery)
-      * [`fn withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithbodytype)
+      * [`fn withBodyType(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithbodytype)
       * [`fn withData(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithdata)
       * [`fn withHeaders(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithheaders)
       * [`fn withHeadersMixin(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithheadersmixin)
-      * [`fn withMethod(value='enum[GET,POST]')`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithmethod)
+      * [`fn withMethod(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithmethod)
       * [`fn withParams(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithparams)
       * [`fn withParamsMixin(value)`](#fn-infinitydataqueryinfinityhtmlqueryurl_optionswithparamsmixin)
       * [`obj body_form`](#obj-infinitydataqueryinfinityhtmlqueryurl_optionsbody_form)
@@ -249,22 +249,22 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
     * [`fn withFilterExpression(value)`](#fn-infinitydataqueryinfinityjsonquerywithfilterexpression)
     * [`fn withFilters(value)`](#fn-infinitydataqueryinfinityjsonquerywithfilters)
     * [`fn withFiltersMixin(value)`](#fn-infinitydataqueryinfinityjsonquerywithfiltersmixin)
-    * [`fn withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')`](#fn-infinitydataqueryinfinityjsonquerywithformat)
+    * [`fn withFormat(value)`](#fn-infinitydataqueryinfinityjsonquerywithformat)
     * [`fn withGroq(value)`](#fn-infinitydataqueryinfinityjsonquerywithgroq)
     * [`fn withHide(value)`](#fn-infinitydataqueryinfinityjsonquerywithhide)
     * [`fn withJsonOptions(value)`](#fn-infinitydataqueryinfinityjsonquerywithjsonoptions)
     * [`fn withJsonOptionsMixin(value)`](#fn-infinitydataqueryinfinityjsonquerywithjsonoptionsmixin)
     * [`fn withKey(value)`](#fn-infinitydataqueryinfinityjsonquerywithkey)
-    * [`fn withParser(value='groq')`](#fn-infinitydataqueryinfinityjsonquerywithparser)
+    * [`fn withParser()`](#fn-infinitydataqueryinfinityjsonquerywithparser)
     * [`fn withQueryType(value)`](#fn-infinitydataqueryinfinityjsonquerywithquerytype)
     * [`fn withRefId(value)`](#fn-infinitydataqueryinfinityjsonquerywithrefid)
     * [`fn withReferenceName(value)`](#fn-infinitydataqueryinfinityjsonquerywithreferencename)
     * [`fn withRootSelector(value)`](#fn-infinitydataqueryinfinityjsonquerywithrootselector)
-    * [`fn withSource(value='reference')`](#fn-infinitydataqueryinfinityjsonquerywithsource)
+    * [`fn withSource()`](#fn-infinitydataqueryinfinityjsonquerywithsource)
     * [`fn withSqliteQuery(value)`](#fn-infinitydataqueryinfinityjsonquerywithsqlitequery)
     * [`fn withSummarizeBy(value)`](#fn-infinitydataqueryinfinityjsonquerywithsummarizeby)
     * [`fn withSummarizeExpression(value)`](#fn-infinitydataqueryinfinityjsonquerywithsummarizeexpression)
-    * [`fn withType(value='json')`](#fn-infinitydataqueryinfinityjsonquerywithtype)
+    * [`fn withType()`](#fn-infinitydataqueryinfinityjsonquerywithtype)
     * [`fn withUql(value)`](#fn-infinitydataqueryinfinityjsonquerywithuql)
     * [`fn withUrl(value)`](#fn-infinitydataqueryinfinityjsonquerywithurl)
     * [`fn withUrlOptions(value)`](#fn-infinitydataqueryinfinityjsonquerywithurloptions)
@@ -273,12 +273,12 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinityjsonquerycolumnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinityjsonquerycolumnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinityjsonquerycolumnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinityjsonquerycolumnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinityjsonquerycolumnswithtype)
     * [`obj computed_columns`](#obj-infinitydataqueryinfinityjsonquerycomputed_columns)
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinityjsonquerycomputed_columnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinityjsonquerycomputed_columnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinityjsonquerycomputed_columnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinityjsonquerycomputed_columnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinityjsonquerycomputed_columnswithtype)
     * [`obj datasource`](#obj-infinitydataqueryinfinityjsonquerydatasource)
       * [`fn withDataSourceRef(value)`](#fn-infinitydataqueryinfinityjsonquerydatasourcewithdatasourceref)
       * [`fn withDataSourceRefMixin(value)`](#fn-infinitydataqueryinfinityjsonquerydatasourcewithdatasourcerefmixin)
@@ -287,22 +287,22 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
         * [`fn withUid(value)`](#fn-infinitydataqueryinfinityjsonquerydatasourcedatasourcerefwithuid)
     * [`obj filters`](#obj-infinitydataqueryinfinityjsonqueryfilters)
       * [`fn withField(value)`](#fn-infinitydataqueryinfinityjsonqueryfilterswithfield)
-      * [`fn withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')`](#fn-infinitydataqueryinfinityjsonqueryfilterswithoperator)
+      * [`fn withOperator(value)`](#fn-infinitydataqueryinfinityjsonqueryfilterswithoperator)
       * [`fn withValue(value)`](#fn-infinitydataqueryinfinityjsonqueryfilterswithvalue)
       * [`fn withValueMixin(value)`](#fn-infinitydataqueryinfinityjsonqueryfilterswithvaluemixin)
     * [`obj json_options`](#obj-infinitydataqueryinfinityjsonqueryjson_options)
       * [`fn withColumnar(value)`](#fn-infinitydataqueryinfinityjsonqueryjson_optionswithcolumnar)
       * [`fn withRootIsNotArray(value)`](#fn-infinitydataqueryinfinityjsonqueryjson_optionswithrootisnotarray)
     * [`obj url_options`](#obj-infinitydataqueryinfinityjsonqueryurl_options)
-      * [`fn withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithbodycontenttype)
+      * [`fn withBodyContentType(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithbodycontenttype)
       * [`fn withBodyForm(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithbodyform)
       * [`fn withBodyFormMixin(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithbodyformmixin)
       * [`fn withBodyGraphqlQuery(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithbodygraphqlquery)
-      * [`fn withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithbodytype)
+      * [`fn withBodyType(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithbodytype)
       * [`fn withData(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithdata)
       * [`fn withHeaders(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithheaders)
       * [`fn withHeadersMixin(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithheadersmixin)
-      * [`fn withMethod(value='enum[GET,POST]')`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithmethod)
+      * [`fn withMethod(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithmethod)
       * [`fn withParams(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithparams)
       * [`fn withParamsMixin(value)`](#fn-infinitydataqueryinfinityjsonqueryurl_optionswithparamsmixin)
       * [`obj body_form`](#obj-infinitydataqueryinfinityjsonqueryurl_optionsbody_form)
@@ -327,18 +327,18 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
     * [`fn withFilterExpression(value)`](#fn-infinitydataqueryinfinitytsvquerywithfilterexpression)
     * [`fn withFilters(value)`](#fn-infinitydataqueryinfinitytsvquerywithfilters)
     * [`fn withFiltersMixin(value)`](#fn-infinitydataqueryinfinitytsvquerywithfiltersmixin)
-    * [`fn withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')`](#fn-infinitydataqueryinfinitytsvquerywithformat)
+    * [`fn withFormat(value)`](#fn-infinitydataqueryinfinitytsvquerywithformat)
     * [`fn withHide(value)`](#fn-infinitydataqueryinfinitytsvquerywithhide)
     * [`fn withKey(value)`](#fn-infinitydataqueryinfinitytsvquerywithkey)
-    * [`fn withParser(value='backend')`](#fn-infinitydataqueryinfinitytsvquerywithparser)
+    * [`fn withParser()`](#fn-infinitydataqueryinfinitytsvquerywithparser)
     * [`fn withQueryType(value)`](#fn-infinitydataqueryinfinitytsvquerywithquerytype)
     * [`fn withRefId(value)`](#fn-infinitydataqueryinfinitytsvquerywithrefid)
     * [`fn withReferenceName(value)`](#fn-infinitydataqueryinfinitytsvquerywithreferencename)
     * [`fn withRootSelector(value)`](#fn-infinitydataqueryinfinitytsvquerywithrootselector)
-    * [`fn withSource(value='reference')`](#fn-infinitydataqueryinfinitytsvquerywithsource)
+    * [`fn withSource()`](#fn-infinitydataqueryinfinitytsvquerywithsource)
     * [`fn withSummarizeBy(value)`](#fn-infinitydataqueryinfinitytsvquerywithsummarizeby)
     * [`fn withSummarizeExpression(value)`](#fn-infinitydataqueryinfinitytsvquerywithsummarizeexpression)
-    * [`fn withType(value='tsv')`](#fn-infinitydataqueryinfinitytsvquerywithtype)
+    * [`fn withType()`](#fn-infinitydataqueryinfinitytsvquerywithtype)
     * [`fn withUql(value)`](#fn-infinitydataqueryinfinitytsvquerywithuql)
     * [`fn withUrl(value)`](#fn-infinitydataqueryinfinitytsvquerywithurl)
     * [`fn withUrlOptions(value)`](#fn-infinitydataqueryinfinitytsvquerywithurloptions)
@@ -347,12 +347,12 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinitytsvquerycolumnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinitytsvquerycolumnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinitytsvquerycolumnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinitytsvquerycolumnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinitytsvquerycolumnswithtype)
     * [`obj computed_columns`](#obj-infinitydataqueryinfinitytsvquerycomputed_columns)
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinitytsvquerycomputed_columnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinitytsvquerycomputed_columnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinitytsvquerycomputed_columnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinitytsvquerycomputed_columnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinitytsvquerycomputed_columnswithtype)
     * [`obj csv_options`](#obj-infinitydataqueryinfinitytsvquerycsv_options)
       * [`fn withColumns(value)`](#fn-infinitydataqueryinfinitytsvquerycsv_optionswithcolumns)
       * [`fn withComment(value)`](#fn-infinitydataqueryinfinitytsvquerycsv_optionswithcomment)
@@ -368,19 +368,19 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
         * [`fn withUid(value)`](#fn-infinitydataqueryinfinitytsvquerydatasourcedatasourcerefwithuid)
     * [`obj filters`](#obj-infinitydataqueryinfinitytsvqueryfilters)
       * [`fn withField(value)`](#fn-infinitydataqueryinfinitytsvqueryfilterswithfield)
-      * [`fn withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')`](#fn-infinitydataqueryinfinitytsvqueryfilterswithoperator)
+      * [`fn withOperator(value)`](#fn-infinitydataqueryinfinitytsvqueryfilterswithoperator)
       * [`fn withValue(value)`](#fn-infinitydataqueryinfinitytsvqueryfilterswithvalue)
       * [`fn withValueMixin(value)`](#fn-infinitydataqueryinfinitytsvqueryfilterswithvaluemixin)
     * [`obj url_options`](#obj-infinitydataqueryinfinitytsvqueryurl_options)
-      * [`fn withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithbodycontenttype)
+      * [`fn withBodyContentType(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithbodycontenttype)
       * [`fn withBodyForm(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithbodyform)
       * [`fn withBodyFormMixin(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithbodyformmixin)
       * [`fn withBodyGraphqlQuery(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithbodygraphqlquery)
-      * [`fn withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithbodytype)
+      * [`fn withBodyType(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithbodytype)
       * [`fn withData(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithdata)
       * [`fn withHeaders(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithheaders)
       * [`fn withHeadersMixin(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithheadersmixin)
-      * [`fn withMethod(value='enum[GET,POST]')`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithmethod)
+      * [`fn withMethod(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithmethod)
       * [`fn withParams(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithparams)
       * [`fn withParamsMixin(value)`](#fn-infinitydataqueryinfinitytsvqueryurl_optionswithparamsmixin)
       * [`obj body_form`](#obj-infinitydataqueryinfinitytsvqueryurl_optionsbody_form)
@@ -403,18 +403,18 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
     * [`fn withFilterExpression(value)`](#fn-infinitydataqueryinfinityxmlquerywithfilterexpression)
     * [`fn withFilters(value)`](#fn-infinitydataqueryinfinityxmlquerywithfilters)
     * [`fn withFiltersMixin(value)`](#fn-infinitydataqueryinfinityxmlquerywithfiltersmixin)
-    * [`fn withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')`](#fn-infinitydataqueryinfinityxmlquerywithformat)
+    * [`fn withFormat(value)`](#fn-infinitydataqueryinfinityxmlquerywithformat)
     * [`fn withHide(value)`](#fn-infinitydataqueryinfinityxmlquerywithhide)
     * [`fn withKey(value)`](#fn-infinitydataqueryinfinityxmlquerywithkey)
-    * [`fn withParser(value='backend')`](#fn-infinitydataqueryinfinityxmlquerywithparser)
+    * [`fn withParser()`](#fn-infinitydataqueryinfinityxmlquerywithparser)
     * [`fn withQueryType(value)`](#fn-infinitydataqueryinfinityxmlquerywithquerytype)
     * [`fn withRefId(value)`](#fn-infinitydataqueryinfinityxmlquerywithrefid)
     * [`fn withReferenceName(value)`](#fn-infinitydataqueryinfinityxmlquerywithreferencename)
     * [`fn withRootSelector(value)`](#fn-infinitydataqueryinfinityxmlquerywithrootselector)
-    * [`fn withSource(value='reference')`](#fn-infinitydataqueryinfinityxmlquerywithsource)
+    * [`fn withSource()`](#fn-infinitydataqueryinfinityxmlquerywithsource)
     * [`fn withSummarizeBy(value)`](#fn-infinitydataqueryinfinityxmlquerywithsummarizeby)
     * [`fn withSummarizeExpression(value)`](#fn-infinitydataqueryinfinityxmlquerywithsummarizeexpression)
-    * [`fn withType(value='xml')`](#fn-infinitydataqueryinfinityxmlquerywithtype)
+    * [`fn withType()`](#fn-infinitydataqueryinfinityxmlquerywithtype)
     * [`fn withUql(value)`](#fn-infinitydataqueryinfinityxmlquerywithuql)
     * [`fn withUrl(value)`](#fn-infinitydataqueryinfinityxmlquerywithurl)
     * [`fn withUrlOptions(value)`](#fn-infinitydataqueryinfinityxmlquerywithurloptions)
@@ -423,12 +423,12 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinityxmlquerycolumnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinityxmlquerycolumnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinityxmlquerycolumnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinityxmlquerycolumnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinityxmlquerycolumnswithtype)
     * [`obj computed_columns`](#obj-infinitydataqueryinfinityxmlquerycomputed_columns)
       * [`fn withSelector(value)`](#fn-infinitydataqueryinfinityxmlquerycomputed_columnswithselector)
       * [`fn withText(value)`](#fn-infinitydataqueryinfinityxmlquerycomputed_columnswithtext)
       * [`fn withTimestampFormat(value)`](#fn-infinitydataqueryinfinityxmlquerycomputed_columnswithtimestampformat)
-      * [`fn withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')`](#fn-infinitydataqueryinfinityxmlquerycomputed_columnswithtype)
+      * [`fn withType(value)`](#fn-infinitydataqueryinfinityxmlquerycomputed_columnswithtype)
     * [`obj datasource`](#obj-infinitydataqueryinfinityxmlquerydatasource)
       * [`fn withDataSourceRef(value)`](#fn-infinitydataqueryinfinityxmlquerydatasourcewithdatasourceref)
       * [`fn withDataSourceRefMixin(value)`](#fn-infinitydataqueryinfinityxmlquerydatasourcewithdatasourcerefmixin)
@@ -437,19 +437,19 @@ local infinityDS = import "github.com/Duologic/grafana-infinity-datasource-libso
         * [`fn withUid(value)`](#fn-infinitydataqueryinfinityxmlquerydatasourcedatasourcerefwithuid)
     * [`obj filters`](#obj-infinitydataqueryinfinityxmlqueryfilters)
       * [`fn withField(value)`](#fn-infinitydataqueryinfinityxmlqueryfilterswithfield)
-      * [`fn withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')`](#fn-infinitydataqueryinfinityxmlqueryfilterswithoperator)
+      * [`fn withOperator(value)`](#fn-infinitydataqueryinfinityxmlqueryfilterswithoperator)
       * [`fn withValue(value)`](#fn-infinitydataqueryinfinityxmlqueryfilterswithvalue)
       * [`fn withValueMixin(value)`](#fn-infinitydataqueryinfinityxmlqueryfilterswithvaluemixin)
     * [`obj url_options`](#obj-infinitydataqueryinfinityxmlqueryurl_options)
-      * [`fn withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithbodycontenttype)
+      * [`fn withBodyContentType(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithbodycontenttype)
       * [`fn withBodyForm(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithbodyform)
       * [`fn withBodyFormMixin(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithbodyformmixin)
       * [`fn withBodyGraphqlQuery(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithbodygraphqlquery)
-      * [`fn withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithbodytype)
+      * [`fn withBodyType(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithbodytype)
       * [`fn withData(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithdata)
       * [`fn withHeaders(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithheaders)
       * [`fn withHeadersMixin(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithheadersmixin)
-      * [`fn withMethod(value='enum[GET,POST]')`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithmethod)
+      * [`fn withMethod(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithmethod)
       * [`fn withParams(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithparams)
       * [`fn withParamsMixin(value)`](#fn-infinitydataqueryinfinityxmlqueryurl_optionswithparamsmixin)
       * [`obj body_form`](#obj-infinitydataqueryinfinityxmlqueryurl_optionsbody_form)
@@ -569,10 +569,12 @@ withFiltersMixin(value)
 ##### fn InfinityDataQuery.InfinityCSVQuery.withFormat
 
 ```ts
-withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')
+withFormat(value)
 ```
 
 
+
+Accepted values for `value` are table, timeseries, dataframe, as-is, node-graph-nodes, node-graph-edges
 
 ##### fn InfinityDataQuery.InfinityCSVQuery.withHide
 
@@ -593,7 +595,7 @@ Unique, guid like, string used in explore mode
 ##### fn InfinityDataQuery.InfinityCSVQuery.withParser
 
 ```ts
-withParser(value='backend')
+withParser()
 ```
 
 
@@ -633,7 +635,7 @@ withRootSelector(value)
 ##### fn InfinityDataQuery.InfinityCSVQuery.withSource
 
 ```ts
-withSource(value='reference')
+withSource()
 ```
 
 
@@ -657,7 +659,7 @@ withSummarizeExpression(value)
 ##### fn InfinityDataQuery.InfinityCSVQuery.withType
 
 ```ts
-withType(value='csv')
+withType()
 ```
 
 
@@ -724,10 +726,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityCSVQuery.columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityCSVQuery.computed_columns
 
@@ -759,10 +763,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityCSVQuery.computed_columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityCSVQuery.csv_options
 
@@ -867,10 +873,12 @@ withField(value)
 ###### fn InfinityDataQuery.InfinityCSVQuery.filters.withOperator
 
 ```ts
-withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')
+withOperator(value)
 ```
 
 
+
+Accepted values for `value` are contains, contains_ignorecase, endswith, endswith_ignorecase, equals, equals_ignorecase, notcontains, notcontains_ignorecase, notequals, notequals_ignorecase, starswith, starswith_ignorecase, regex, regex_not, in, notin, ==, !=, <, <=, >, >=
 
 ###### fn InfinityDataQuery.InfinityCSVQuery.filters.withValue
 
@@ -894,10 +902,12 @@ withValueMixin(value)
 ###### fn InfinityDataQuery.InfinityCSVQuery.url_options.withBodyContentType
 
 ```ts
-withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')
+withBodyContentType(value)
 ```
 
 
+
+Accepted values for `value` are text/plain, application/json, application/xml, text/html, application/javascript
 
 ###### fn InfinityDataQuery.InfinityCSVQuery.url_options.withBodyForm
 
@@ -926,10 +936,12 @@ withBodyGraphqlQuery(value)
 ###### fn InfinityDataQuery.InfinityCSVQuery.url_options.withBodyType
 
 ```ts
-withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')
+withBodyType(value)
 ```
 
 
+
+Accepted values for `value` are none, form-data, x-www-form-urlencoded, raw, graphql
 
 ###### fn InfinityDataQuery.InfinityCSVQuery.url_options.withData
 
@@ -958,10 +970,12 @@ withHeadersMixin(value)
 ###### fn InfinityDataQuery.InfinityCSVQuery.url_options.withMethod
 
 ```ts
-withMethod(value='enum[GET,POST]')
+withMethod(value)
 ```
 
 
+
+Accepted values for `value` are GET, POST
 
 ###### fn InfinityDataQuery.InfinityCSVQuery.url_options.withParams
 
@@ -1122,10 +1136,12 @@ withFiltersMixin(value)
 ##### fn InfinityDataQuery.InfinityGraphQLQuery.withFormat
 
 ```ts
-withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')
+withFormat(value)
 ```
 
 
+
+Accepted values for `value` are table, timeseries, dataframe, as-is, node-graph-nodes, node-graph-edges
 
 ##### fn InfinityDataQuery.InfinityGraphQLQuery.withGroq
 
@@ -1170,7 +1186,7 @@ Unique, guid like, string used in explore mode
 ##### fn InfinityDataQuery.InfinityGraphQLQuery.withParser
 
 ```ts
-withParser(value='groq')
+withParser()
 ```
 
 
@@ -1210,7 +1226,7 @@ withRootSelector(value)
 ##### fn InfinityDataQuery.InfinityGraphQLQuery.withSource
 
 ```ts
-withSource(value='reference')
+withSource()
 ```
 
 
@@ -1234,7 +1250,7 @@ withSummarizeExpression(value)
 ##### fn InfinityDataQuery.InfinityGraphQLQuery.withType
 
 ```ts
-withType(value='graphql')
+withType()
 ```
 
 
@@ -1301,10 +1317,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityGraphQLQuery.computed_columns
 
@@ -1336,10 +1354,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.computed_columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityGraphQLQuery.datasource
 
@@ -1393,10 +1413,12 @@ withField(value)
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.filters.withOperator
 
 ```ts
-withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')
+withOperator(value)
 ```
 
 
+
+Accepted values for `value` are contains, contains_ignorecase, endswith, endswith_ignorecase, equals, equals_ignorecase, notcontains, notcontains_ignorecase, notequals, notequals_ignorecase, starswith, starswith_ignorecase, regex, regex_not, in, notin, ==, !=, <, <=, >, >=
 
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.filters.withValue
 
@@ -1439,10 +1461,12 @@ withRootIsNotArray(value)
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.url_options.withBodyContentType
 
 ```ts
-withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')
+withBodyContentType(value)
 ```
 
 
+
+Accepted values for `value` are text/plain, application/json, application/xml, text/html, application/javascript
 
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.url_options.withBodyForm
 
@@ -1471,10 +1495,12 @@ withBodyGraphqlQuery(value)
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.url_options.withBodyType
 
 ```ts
-withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')
+withBodyType(value)
 ```
 
 
+
+Accepted values for `value` are none, form-data, x-www-form-urlencoded, raw, graphql
 
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.url_options.withData
 
@@ -1503,10 +1529,12 @@ withHeadersMixin(value)
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.url_options.withMethod
 
 ```ts
-withMethod(value='enum[GET,POST]')
+withMethod(value)
 ```
 
 
+
+Accepted values for `value` are GET, POST
 
 ###### fn InfinityDataQuery.InfinityGraphQLQuery.url_options.withParams
 
@@ -1667,10 +1695,12 @@ withFiltersMixin(value)
 ##### fn InfinityDataQuery.InfinityHTMLQuery.withFormat
 
 ```ts
-withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')
+withFormat(value)
 ```
 
 
+
+Accepted values for `value` are table, timeseries, dataframe, as-is, node-graph-nodes, node-graph-edges
 
 ##### fn InfinityDataQuery.InfinityHTMLQuery.withHide
 
@@ -1691,7 +1721,7 @@ Unique, guid like, string used in explore mode
 ##### fn InfinityDataQuery.InfinityHTMLQuery.withParser
 
 ```ts
-withParser(value='backend')
+withParser()
 ```
 
 
@@ -1731,7 +1761,7 @@ withRootSelector(value)
 ##### fn InfinityDataQuery.InfinityHTMLQuery.withSource
 
 ```ts
-withSource(value='reference')
+withSource()
 ```
 
 
@@ -1755,7 +1785,7 @@ withSummarizeExpression(value)
 ##### fn InfinityDataQuery.InfinityHTMLQuery.withType
 
 ```ts
-withType(value='html')
+withType()
 ```
 
 
@@ -1814,10 +1844,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityHTMLQuery.columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityHTMLQuery.computed_columns
 
@@ -1849,10 +1881,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityHTMLQuery.computed_columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityHTMLQuery.datasource
 
@@ -1906,10 +1940,12 @@ withField(value)
 ###### fn InfinityDataQuery.InfinityHTMLQuery.filters.withOperator
 
 ```ts
-withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')
+withOperator(value)
 ```
 
 
+
+Accepted values for `value` are contains, contains_ignorecase, endswith, endswith_ignorecase, equals, equals_ignorecase, notcontains, notcontains_ignorecase, notequals, notequals_ignorecase, starswith, starswith_ignorecase, regex, regex_not, in, notin, ==, !=, <, <=, >, >=
 
 ###### fn InfinityDataQuery.InfinityHTMLQuery.filters.withValue
 
@@ -1933,10 +1969,12 @@ withValueMixin(value)
 ###### fn InfinityDataQuery.InfinityHTMLQuery.url_options.withBodyContentType
 
 ```ts
-withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')
+withBodyContentType(value)
 ```
 
 
+
+Accepted values for `value` are text/plain, application/json, application/xml, text/html, application/javascript
 
 ###### fn InfinityDataQuery.InfinityHTMLQuery.url_options.withBodyForm
 
@@ -1965,10 +2003,12 @@ withBodyGraphqlQuery(value)
 ###### fn InfinityDataQuery.InfinityHTMLQuery.url_options.withBodyType
 
 ```ts
-withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')
+withBodyType(value)
 ```
 
 
+
+Accepted values for `value` are none, form-data, x-www-form-urlencoded, raw, graphql
 
 ###### fn InfinityDataQuery.InfinityHTMLQuery.url_options.withData
 
@@ -1997,10 +2037,12 @@ withHeadersMixin(value)
 ###### fn InfinityDataQuery.InfinityHTMLQuery.url_options.withMethod
 
 ```ts
-withMethod(value='enum[GET,POST]')
+withMethod(value)
 ```
 
 
+
+Accepted values for `value` are GET, POST
 
 ###### fn InfinityDataQuery.InfinityHTMLQuery.url_options.withParams
 
@@ -2161,10 +2203,12 @@ withFiltersMixin(value)
 ##### fn InfinityDataQuery.InfinityJSONQuery.withFormat
 
 ```ts
-withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')
+withFormat(value)
 ```
 
 
+
+Accepted values for `value` are table, timeseries, dataframe, as-is, node-graph-nodes, node-graph-edges
 
 ##### fn InfinityDataQuery.InfinityJSONQuery.withGroq
 
@@ -2209,7 +2253,7 @@ Unique, guid like, string used in explore mode
 ##### fn InfinityDataQuery.InfinityJSONQuery.withParser
 
 ```ts
-withParser(value='groq')
+withParser()
 ```
 
 
@@ -2249,7 +2293,7 @@ withRootSelector(value)
 ##### fn InfinityDataQuery.InfinityJSONQuery.withSource
 
 ```ts
-withSource(value='reference')
+withSource()
 ```
 
 
@@ -2281,7 +2325,7 @@ withSummarizeExpression(value)
 ##### fn InfinityDataQuery.InfinityJSONQuery.withType
 
 ```ts
-withType(value='json')
+withType()
 ```
 
 
@@ -2348,10 +2392,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityJSONQuery.columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityJSONQuery.computed_columns
 
@@ -2383,10 +2429,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityJSONQuery.computed_columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityJSONQuery.datasource
 
@@ -2440,10 +2488,12 @@ withField(value)
 ###### fn InfinityDataQuery.InfinityJSONQuery.filters.withOperator
 
 ```ts
-withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')
+withOperator(value)
 ```
 
 
+
+Accepted values for `value` are contains, contains_ignorecase, endswith, endswith_ignorecase, equals, equals_ignorecase, notcontains, notcontains_ignorecase, notequals, notequals_ignorecase, starswith, starswith_ignorecase, regex, regex_not, in, notin, ==, !=, <, <=, >, >=
 
 ###### fn InfinityDataQuery.InfinityJSONQuery.filters.withValue
 
@@ -2486,10 +2536,12 @@ withRootIsNotArray(value)
 ###### fn InfinityDataQuery.InfinityJSONQuery.url_options.withBodyContentType
 
 ```ts
-withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')
+withBodyContentType(value)
 ```
 
 
+
+Accepted values for `value` are text/plain, application/json, application/xml, text/html, application/javascript
 
 ###### fn InfinityDataQuery.InfinityJSONQuery.url_options.withBodyForm
 
@@ -2518,10 +2570,12 @@ withBodyGraphqlQuery(value)
 ###### fn InfinityDataQuery.InfinityJSONQuery.url_options.withBodyType
 
 ```ts
-withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')
+withBodyType(value)
 ```
 
 
+
+Accepted values for `value` are none, form-data, x-www-form-urlencoded, raw, graphql
 
 ###### fn InfinityDataQuery.InfinityJSONQuery.url_options.withData
 
@@ -2550,10 +2604,12 @@ withHeadersMixin(value)
 ###### fn InfinityDataQuery.InfinityJSONQuery.url_options.withMethod
 
 ```ts
-withMethod(value='enum[GET,POST]')
+withMethod(value)
 ```
 
 
+
+Accepted values for `value` are GET, POST
 
 ###### fn InfinityDataQuery.InfinityJSONQuery.url_options.withParams
 
@@ -2730,10 +2786,12 @@ withFiltersMixin(value)
 ##### fn InfinityDataQuery.InfinityTSVQuery.withFormat
 
 ```ts
-withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')
+withFormat(value)
 ```
 
 
+
+Accepted values for `value` are table, timeseries, dataframe, as-is, node-graph-nodes, node-graph-edges
 
 ##### fn InfinityDataQuery.InfinityTSVQuery.withHide
 
@@ -2754,7 +2812,7 @@ Unique, guid like, string used in explore mode
 ##### fn InfinityDataQuery.InfinityTSVQuery.withParser
 
 ```ts
-withParser(value='backend')
+withParser()
 ```
 
 
@@ -2794,7 +2852,7 @@ withRootSelector(value)
 ##### fn InfinityDataQuery.InfinityTSVQuery.withSource
 
 ```ts
-withSource(value='reference')
+withSource()
 ```
 
 
@@ -2818,7 +2876,7 @@ withSummarizeExpression(value)
 ##### fn InfinityDataQuery.InfinityTSVQuery.withType
 
 ```ts
-withType(value='tsv')
+withType()
 ```
 
 
@@ -2885,10 +2943,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityTSVQuery.columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityTSVQuery.computed_columns
 
@@ -2920,10 +2980,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityTSVQuery.computed_columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityTSVQuery.csv_options
 
@@ -3028,10 +3090,12 @@ withField(value)
 ###### fn InfinityDataQuery.InfinityTSVQuery.filters.withOperator
 
 ```ts
-withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')
+withOperator(value)
 ```
 
 
+
+Accepted values for `value` are contains, contains_ignorecase, endswith, endswith_ignorecase, equals, equals_ignorecase, notcontains, notcontains_ignorecase, notequals, notequals_ignorecase, starswith, starswith_ignorecase, regex, regex_not, in, notin, ==, !=, <, <=, >, >=
 
 ###### fn InfinityDataQuery.InfinityTSVQuery.filters.withValue
 
@@ -3055,10 +3119,12 @@ withValueMixin(value)
 ###### fn InfinityDataQuery.InfinityTSVQuery.url_options.withBodyContentType
 
 ```ts
-withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')
+withBodyContentType(value)
 ```
 
 
+
+Accepted values for `value` are text/plain, application/json, application/xml, text/html, application/javascript
 
 ###### fn InfinityDataQuery.InfinityTSVQuery.url_options.withBodyForm
 
@@ -3087,10 +3153,12 @@ withBodyGraphqlQuery(value)
 ###### fn InfinityDataQuery.InfinityTSVQuery.url_options.withBodyType
 
 ```ts
-withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')
+withBodyType(value)
 ```
 
 
+
+Accepted values for `value` are none, form-data, x-www-form-urlencoded, raw, graphql
 
 ###### fn InfinityDataQuery.InfinityTSVQuery.url_options.withData
 
@@ -3119,10 +3187,12 @@ withHeadersMixin(value)
 ###### fn InfinityDataQuery.InfinityTSVQuery.url_options.withMethod
 
 ```ts
-withMethod(value='enum[GET,POST]')
+withMethod(value)
 ```
 
 
+
+Accepted values for `value` are GET, POST
 
 ###### fn InfinityDataQuery.InfinityTSVQuery.url_options.withParams
 
@@ -3283,10 +3353,12 @@ withFiltersMixin(value)
 ##### fn InfinityDataQuery.InfinityXMLQuery.withFormat
 
 ```ts
-withFormat(value='enum[table,timeseries,dataframe,as-is,node-graph-nodes,node-graph-edges]')
+withFormat(value)
 ```
 
 
+
+Accepted values for `value` are table, timeseries, dataframe, as-is, node-graph-nodes, node-graph-edges
 
 ##### fn InfinityDataQuery.InfinityXMLQuery.withHide
 
@@ -3307,7 +3379,7 @@ Unique, guid like, string used in explore mode
 ##### fn InfinityDataQuery.InfinityXMLQuery.withParser
 
 ```ts
-withParser(value='backend')
+withParser()
 ```
 
 
@@ -3347,7 +3419,7 @@ withRootSelector(value)
 ##### fn InfinityDataQuery.InfinityXMLQuery.withSource
 
 ```ts
-withSource(value='reference')
+withSource()
 ```
 
 
@@ -3371,7 +3443,7 @@ withSummarizeExpression(value)
 ##### fn InfinityDataQuery.InfinityXMLQuery.withType
 
 ```ts
-withType(value='xml')
+withType()
 ```
 
 
@@ -3438,10 +3510,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityXMLQuery.columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityXMLQuery.computed_columns
 
@@ -3473,10 +3547,12 @@ withTimestampFormat(value)
 ###### fn InfinityDataQuery.InfinityXMLQuery.computed_columns.withType
 
 ```ts
-withType(value='enum[string,number,timestamp,timestamp_epoch,timestamp_epoch_s]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are string, number, timestamp, timestamp_epoch, timestamp_epoch_s
 
 ##### obj InfinityDataQuery.InfinityXMLQuery.datasource
 
@@ -3530,10 +3606,12 @@ withField(value)
 ###### fn InfinityDataQuery.InfinityXMLQuery.filters.withOperator
 
 ```ts
-withOperator(value='enum[contains,contains_ignorecase,endswith,endswith_ignorecase,equals,equals_ignorecase,notcontains,notcontains_ignorecase,notequals,notequals_ignorecase,starswith,starswith_ignorecase,regex,regex_not,in,notin,==,!=,<,<=,>,>=]')
+withOperator(value)
 ```
 
 
+
+Accepted values for `value` are contains, contains_ignorecase, endswith, endswith_ignorecase, equals, equals_ignorecase, notcontains, notcontains_ignorecase, notequals, notequals_ignorecase, starswith, starswith_ignorecase, regex, regex_not, in, notin, ==, !=, <, <=, >, >=
 
 ###### fn InfinityDataQuery.InfinityXMLQuery.filters.withValue
 
@@ -3557,10 +3635,12 @@ withValueMixin(value)
 ###### fn InfinityDataQuery.InfinityXMLQuery.url_options.withBodyContentType
 
 ```ts
-withBodyContentType(value='enum[text/plain,application/json,application/xml,text/html,application/javascript]')
+withBodyContentType(value)
 ```
 
 
+
+Accepted values for `value` are text/plain, application/json, application/xml, text/html, application/javascript
 
 ###### fn InfinityDataQuery.InfinityXMLQuery.url_options.withBodyForm
 
@@ -3589,10 +3669,12 @@ withBodyGraphqlQuery(value)
 ###### fn InfinityDataQuery.InfinityXMLQuery.url_options.withBodyType
 
 ```ts
-withBodyType(value='enum[none,form-data,x-www-form-urlencoded,raw,graphql]')
+withBodyType(value)
 ```
 
 
+
+Accepted values for `value` are none, form-data, x-www-form-urlencoded, raw, graphql
 
 ###### fn InfinityDataQuery.InfinityXMLQuery.url_options.withData
 
@@ -3621,10 +3703,12 @@ withHeadersMixin(value)
 ###### fn InfinityDataQuery.InfinityXMLQuery.url_options.withMethod
 
 ```ts
-withMethod(value='enum[GET,POST]')
+withMethod(value)
 ```
 
 
+
+Accepted values for `value` are GET, POST
 
 ###### fn InfinityDataQuery.InfinityXMLQuery.url_options.withParams
 
